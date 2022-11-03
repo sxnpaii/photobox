@@ -4,6 +4,7 @@ import logo from '../img/Logo.svg';
 
 export default function header() {
   return (
+    
       <header className='App-header' data-aos="zoom-out">
         <nav className="navbar navbar-expand-lg navbar-dark">
           <div className="container">
