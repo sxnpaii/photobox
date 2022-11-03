@@ -6,13 +6,13 @@ export default function Experience() {
   return (
     <div>
       <>
-        <section className='frame'>
+        <section className='frame' data-aos="zoom-in"> 
           <div className="heades">
-            <h2 className='display-2'>Experience of 10 years in the field</h2>
-            <img src={headesImg} alt="" />
+            <h2 className='display-2'  data-aos="fade-up" data-aos-duration="1000">Experience of 10 years in the field</h2>
+            <img src={headesImg} data-aos="fade-up" data-aos-duration="1200" alt="" />
           </div>
           <div className="menu">
-            <ul>
+            <ul  data-aos="fade-left" data-aos-duration="900" data-aos-delay="100">
               <li>
                 FOOD PHOTOGRAPHY
                 <i className="fa-solid fa-arrow-right"></i>
@@ -33,7 +33,7 @@ export default function Experience() {
                 ABOUT ME <i class="ri-arrow-right-s-line"></i>
               </button>
             </ul>
-            <img src={menuImg} alt="" />
+            <img src={menuImg}  data-aos="fade-up" data-aos-duration="900" alt="" />
           </div>
         </section>
       </>

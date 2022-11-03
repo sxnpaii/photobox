@@ -8,7 +8,7 @@ import sliderImg5 from "../img/slides_img/sliderImg7.jpg";
 import sliderImg6 from "../img/slides_img/sliderImg8.jpg";
 import sliderImg7 from "../img/slides_img/sliderImg9.jpg";
 // personal style
-import "../App.css";
+import "../App.scss";
 // //
 // import React, { useRef, useState } from "react";
 // Import Swiper React components
@@ -39,10 +39,10 @@ export default function Slider() {
                     320: {
                         slidesPerView: 1,
                     },
-                    470: {
-                        slidesPerView: 2,
+                    991: {
+                        slidesPerView: 1,
                     },
-                    798: {
+                    992: {
                         slidesPerView: 3,
                     }
                 }}

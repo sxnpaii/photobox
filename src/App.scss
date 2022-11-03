@@ -58,10 +58,15 @@ body {
     color: $wht;
 }
 
+.App {
+    overflow: hidden;
+}
+
 // header.jsx
 header {
     width: 100%;
     margin-bottom: 55px;
+
 
     nav.navbar {
         .container {
@@ -138,6 +143,7 @@ section.App-hero {
     // min-height: 455px;
     height: 70vh;
 
+
     h1.display-1 {
         font-family: $Jakarta-Sans;
         font-weight: 800;
@@ -153,8 +159,8 @@ section.App-hero {
 
 // slider section
 section.slider {
-    margin-top: 45px;
-    overflow: hidden;
+    margin-top: 25px;
+
 }
 
 // swiper.jsx
@@ -166,7 +172,6 @@ div.swiper {
 
     .swiper-wrapper {
         width: 100%;
-        // justify-content: center;
 
         .swiper-slide {
             // width: 470px;
@@ -178,27 +183,35 @@ div.swiper {
         }
     }
 
-    .controllers {
-        display: flex;
-        justify-content: space-between;
-        width: 90%;
-
-        position: absolute;
-        top: 50%;
-        left: 5%;
-    }
-
-    div.swiper-button-next,
-    div.swiper-button-prev {
+    @mixin btnProp {
         cursor: pointer;
-        width: 71px;
-        height: 71px;
+        width: 61px;
+        height: 61px;
         border-radius: 50%;
         background: $secondary;
-        margin: auto;
-        font-size: 24px;
         color: $blk;
         z-index: 11;
+
+    }
+
+    div.swiper-button-prev {
+        @include btnProp();
+
+        &::after {
+            content: "\ea60";
+            font-family: "remixicon";
+        }
+
+    }
+
+    div.swiper-button-next {
+        @include btnProp();
+
+        &::after {
+            content: "\ea6c";
+            font-family: "remixicon";
+        }
+
     }
 }
 
@@ -237,6 +250,8 @@ section.frame {
     background: $secondary;
     color: $blk;
     margin: 56px auto 0 auto;
+    overflow: hidden;
+
 
     .heades {
         max-width: 540px;
@@ -403,14 +418,12 @@ section.Works {
 
 section.innerWorks {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
     gap: 50px;
 
-    @media (max-width:992px) {
-        overflow: hidden;
-    }
+    @media (max-width:992px) {}
 
     img {
         width: 100%;
@@ -425,7 +438,7 @@ section.innerWorks {
 
         .text {
             display: flex;
-            align-items: start;
+            align-items: flex-end;
             width: 100%;
             column-gap: 25px;
             text-transform: uppercase;

@@ -4,11 +4,13 @@ import logo from '../img/Logo.svg';
 
 export default function header() {
   return (
-    <div>
-      <header className='App-header'>
+      <header className='App-header' data-aos="zoom-out">
         <nav className="navbar navbar-expand-lg navbar-dark">
           <div className="container">
-            <a className="navbar-brand" href="#!"><img src={logo} alt="" /> PHOTOFOX</a>
+            <a className="navbar-brand" href="#!">
+              <img src={logo} alt="" />
+              PHOTOFOX
+            </a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
@@ -26,7 +28,7 @@ export default function header() {
                   </li>
                 </ul>
                 <ul className="navbar-nav">
-                  
+
                   <li className="nav-item">
                     <a href="#!" className="nav-link">contact</a></li>
                 </ul>
@@ -35,6 +37,5 @@ export default function header() {
           </div>
         </nav>
       </header>
-    </div>
   )
 }
